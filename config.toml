@@ -1,0 +1,43 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+ignoreErrors = ["error-missing-instagram-accesstoken"]
+title = "niko."
+theme="archie-master"
+copyright = "© Niko McCarty"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+[params]
+	mode="toggle"
+	useCDN=false
+	subtitle = "Write. Science. Code."
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/nikomccarty"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/NikoMcCarty"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
