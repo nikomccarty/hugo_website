@@ -7,6 +7,8 @@ copyright = "© Niko McCarty"
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
+googleAnalytics = 'G-QPKHEFDJJQ'
+
 [params]
 	mode="toggle"
 	useCDN=false
