@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on niko.</title>
-    <link>https://aquamarine-heliotrope-618f98.netlify.app/posts/</link>
-    <description>Recent content in Posts on niko.</description>
+    <title>data on niko.</title>
+    <link>https://aquamarine-heliotrope-618f98.netlify.app/tags/data/</link>
+    <description>Recent content in data on niko.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Niko McCarty</copyright>
-    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aquamarine-heliotrope-618f98.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aquamarine-heliotrope-618f98.netlify.app/tags/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NYU Science Journalism Twitter Bias</title>
       <link>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-1/</link>

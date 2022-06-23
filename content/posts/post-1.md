@@ -1,62 +1,37 @@
 ---
-title: "Primer: When You Have Too Much to Do"
-date: 2020-04-01T02:01:58+05:30
-description: "You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more."
-tags: [Primer, todo]
+title: "NYU Science Journalism Twitter Bias"
+date: 2022-03-06
+description: "An exploration into science journalists who graduated from NYU, and whether male graduates tend to have more followers."
+tags: ['data', 'code']
 ---
 
-You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
+The verdict: Men and women who graduate from NYU's SHERP program tend to have a similar number of Twitter followers. Let me explain how I know that.
 
-It all keeps piling up, and it can feel overwhelming.
+A few months ago, while dreaming up story ideas for a health journalism course at NYU, I came across a study about gender disparities—in a medical journal. In that paper, researchers quantified the influence that male and female medical researchers exert on Twitter. The main finding: female medical researchers have a lower number of Twitter followers compared to their male colleagues, and this gap tends to widen as women progress in their careers and are promoted to higher tenure ranks. The paper is called [“Gender Differences in Twitter Use and Influence Among Health Policy and Health Services Researchers,”](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2753117) and it was published in JAMA Internal Medicine in 2019. The title might be a mouthful, but its findings are deep; its data substantive.
 
-How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?
+For this study, the researchers also analyzed the mean proportion of women who follow women, how many retweets an original tweet garners for men compared to women, and many other things. I highlight some of the surprising or important gender disparities in the table below.
 
-In this primer, I’ll look at some key strategies and tactics for taking on an overloaded life with an open heart, lots of energy, and a smile on your face.
+| Variable                                     | Male        | Female       | p-value |
+|----------------------------------------------|-------------|--------------|---------|
+| Years with a Twitter acount                  | 5.1±2.6     | 4.5±2.5      | <.001   |
+| What % of people that they follow are women? | 42.6±14.8   | 54.8±14.6    | <0.001  |
+| Avg. number of retweets per original tweet   | 3.1±3.4     | 2.4±2.2      | 0.01    | 
+| Number of Twitter followers                  | 1162±3056.2 | 567.5±1819.7 | <0.001  | 
 
-## The First Step: Triage
+After reading this study, I wondered if the same Twitter "bias" — namely, that women have fewer Twitter followers than men — also applies to other professional fields. As a journalist studying at NYU, I started to explore Twitter data for past graduates of the Science, Health and Environmental Reporting, or [SHERP](https://journalism.nyu.edu/graduate/programs/science-health-and-environmental-reporting/), program. This is a masters program for science journalists.
 
-Whether you’re just starting your day, or you’re in the middle of the chaos and just need to find some sanity … the first step is to get into triage mode.
+I found a Twitter list called “[SHERP Tweeters](https://twitter.com/i/lists/46864545)” that includes a limited subset of SHERP graduates extending back more than a decade. Then, I used Python and [Tweepy](https://www.tweepy.org/) (an open-source Python library for accessing the Twitter API) to collect public data from their accounts. This data was collected on October 10, 2020 and includes the number of each person’s followers, how many people they follow, their Twitter handle, and other basic information. Gender was inferred for each person based on pronouns listed in their public account; it is possible that some people have been mis-gendered, and I apologize if that’s the case.
 
-Triage, as you probably know, is sorting through the chaos to prioritize: what needs to be done now, what needs to be done today, what needs to be done this week, and what can wait? You’re looking at urgency, but also what’s meaningful and important.
+With the data thus collected and tidied, I plotted two simple scatterplots. In the plots below, each dot represents a person in one of two datasets; the science journalist data that I collected, or the medical researcher data from that JAMA Internal Medicine paper. On the x-axis, I plotted the number of people that each individual is following. Then, on the y-axis, I plotted their number of followers. Overlaid on this scatterplot are regression lines, for both men and women, with a 95% confidence interval shown in a lower opacity. The scatterplots for the two datasets look very similar.
 
-Here’s what you might do:
+![A plot showing regressions of scatterplots of followers vs. following for SHERP and medical researchers](/img/post-1/sherp_twitter_regressions.png)
 
-* Pick out the things that need to be done today. Start a Short List for things you’re going to do today. That might be important tasks for big projects, urgent tasks that could result in damage if you don’t act, smaller admin tasks that you really should take care of today, and responding to important messages. I would recommend being ruthless and cutting out as much as you can, having just 5 things on your plate if that’s at all possible. Not everything needs to be done today, and not every email needs to be responded to.
-* Push some things to tomorrow and the rest of the week. If you have deadlines that can be pushed back (or renegotiated), do that. Spread the work out over the week, even into next week. What needs to be done tomorrow? What can wait a day or two longer?
-* Eliminate what you can. That might mean just not replying to some messages that aren’t that important and don’t really require a reply. It might mean telling some people that you can’t take on this project after all, or that you need to get out of the commitment that you said you’d do. Yes, this is uncomfortable. For now, just put them on a list called, “To Not Do,” and plan to figure out how to get out of them later.
+Next, I focused in on the SHERP dataset, and looked solely at differences in the number of followers for male versus female science journalists. The distribution of followers for male SHERP graduates appears bimodal; that is, most men have between 500 and 5,000 Twitter followers, but there is a second group that has between 7,000 and 12,000 followers. For female SHERP graduates, there is only one large peak in the data. The majority of female SHERPies have 1,000 followers or less.
 
-OK, you have some breathing room and a manageable list now! Let’s shrink that down even further and just pick one thing.
+![A density plot showing the distribution in followers for male and female SHERP graduates](/img/post-1/sherp_twitter_density.png)
 
-## Next: Focus on One Thing
+A density plot — though pretty to look at — doesn't tell us whether or not a significant difference exists between the two groups. To answer that question, I used Python to perform a [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) analysis.
 
-With a lot on your plate, it’s hard to pick one thing to focus on. But that’s exactly what I’m going to ask you to do.
+What I found is that there is no statistically significant difference in the number of Twitter followers for male and female SHERP graduates. My null hypothesis was that the two genders have the same number of Twitter followers, and I was not able to reject that hypothesis, using an arbitrary p-value threshold of 0.05. My calculated p-value was 0.084.
 
-Pick one thing, and give it your focus. Yes, there are a lot of other things you can focus on. Yes, they’re stressing you out and making it hard to focus. But think about it this way: if you allow it all to be in your head all the time, that will always be your mode of being. You’ll always be thinking about everything, stressing out about it all, with a frazzled mind … unless you start shifting.
-
-The shift:
-
-* Pick something to focus on. Look at the triaged list from the first section … if you have 5-6 things on this Short List, you can assess whether there’s any super urgent, time-sensitive things you need to take care of. If there are, pick one of them. If not, pick the most important one — probably the one you have been putting off doing.
-* Clear everything else away. Just for a little bit. Close all browser tabs, turn off notifications, close open applications, put your phone away.
-* Put that one task before you, and allow yourself to be with it completely. Pour yourself into it. Think of it as a practice, of letting go (of everything else), of focus, of radical simplicity.
-
-When you’re done (or after 15-20 minutes have gone by at least), you can switch to something else. But don’t allow yourself to switch until then.
-
-By closing off all exits, by choosing one thing, by giving yourself completely to that thing … you’re now in a different mode that isn’t so stressful or spread thin. You’ve started a shift that will lead to focus and sanity.
-
-## Third: Schedule Time to Simplify
-
-Remember the To Not Do list above? Schedule some time this week to start reducing your projects, saying no to people, getting out of commitments, crossing stuff off your task list … so that you can have some sanity back.
-
-There are lots of little things that you’ve said “yes” to that you probably shouldn’t have. That’s why you’re overloaded. Protect your more important work, and your time off, and your peace of mind, by saying “no” to things that aren’t as important.
-
-Schedule the time to simplify — you don’t have to do it today, but sometime soon — and you can then not have to worry about the things on your To Not Do list until then.
-
-## Fourth: Practice Mindful Focus
-
-Go through the rest of the day with an attitude of “mindful focus.” That means that you are doing one thing at a time, being as present as you can, switching as little as you can.
-
-Think of it as a settling of the mind. A new mode of being. A mindfulness practice (which means you won’t be perfect at it).
-
-As you practice mindful focus, you’ll learn to practice doing things with an open heart, with curiosity and gratitude, and even joy. Try these one at a time as you get to do each task on your Short List.
-
-You’ll find that you’re not so overloaded, but that each task is just perfect for that moment. And that’s a completely new relationship with the work that you do, and a new relationship with life.
+I'm not comfortable making concrete claims based on a simple statistical test, anyway. The SHERP dataset has all sorts of problems; genders might be misassigned and not all SHERPies are on the list. My dataset is also quite a bit smaller than the medical researcher dataset, and why is 0.05 considered a typical p-value anyway? All I can say, for sure, is that the visual plots show marked differences between male and female science journalists, and their followings on Twitter.

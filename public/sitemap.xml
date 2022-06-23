@@ -2,56 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://aquamarine-heliotrope-618f98.netlify.app/about/</loc>
+    <lastmod>2022-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://aquamarine-heliotrope-618f98.netlify.app/published/</loc>
+    <lastmod>2022-06-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://aquamarine-heliotrope-618f98.netlify.app/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/code/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/tg-gh/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/primer/</loc>
-    <lastmod>2020-04-01T02:01:58+05:30</lastmod>
+    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/data/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-1/</loc>
-    <lastmod>2020-04-01T02:01:58+05:30</lastmod>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/</loc>
-    <lastmod>2020-04-01T02:01:58+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/todo/</loc>
-    <lastmod>2020-04-01T02:01:58+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-4/</loc>
-    <lastmod>2020-03-18T12:13:35+05:30</lastmod>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://aquamarine-heliotrope-618f98.netlify.app/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-7/</loc>
-    <lastmod>2018-03-18T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-5/</loc>
-    <lastmod>2018-03-18T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-6/</loc>
-    <lastmod>2018-03-18T12:13:36+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-3/</loc>
-    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/procrastinating/</loc>
-    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/posts/post-2/</loc>
-    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
-  </url><url>
-    <loc>https://aquamarine-heliotrope-618f98.netlify.app/tags/space/</loc>
-    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
   </url><url>
     <loc>https://aquamarine-heliotrope-618f98.netlify.app/categories/</loc>
   </url>
