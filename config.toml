@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://aquamarine-heliotrope-618f98.netlify.app"
 languageCode = "en-us"
 ignoreErrors = ["error-missing-instagram-accesstoken"]
 title = "niko."
